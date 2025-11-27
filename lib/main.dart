@@ -3,7 +3,6 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:video_player/video_player.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart'; // Import flutter_dotenv
-import 'package:flutter_svg/flutter_svg.dart'; // Import flutter_svg
 
 Future<void> main() async {
   // Make main async
@@ -60,7 +59,7 @@ class _QuoteScreenState extends State<QuoteScreen> {
         headers: {'X-Api-Key': apiKey},
       );
 
-      // Check if request was successful (status code 200)
+      // Check if response was successful (status code 200)
       if (response.statusCode == 200) {
         // Parse JSON response - API Ninjas returns an array
         final List<dynamic> data = json.decode(response.body);
@@ -232,25 +231,57 @@ class _QuoteScreenState extends State<QuoteScreen> {
                   horizontal: 24.0,
                   vertical: 16.0,
                 ),
-                child: Theme(
-                  data: ThemeData(
-                    iconTheme: IconThemeData(color: Colors.transparent),
-                  ),
-                  child: SvgPicture.asset(
-                    'assets/images/as_color.svg',
-                    height: 40.0,
-                  ),
+                child: Row(
+                  mainAxisAlignment:
+                      MainAxisAlignment.start, // Align to the left
+                  children: [
+                    Image.asset(
+                      'assets/images/as_color.png', // Your PNG logo
+                      height: 40.0, // Adjust height as needed
+                    ),
+                  ],
                 ),
               ),
             ),
           ),
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: isLoading ? null : fetchQuote,
-        tooltip: 'New Quote',
-        child: const Icon(Icons.refresh),
-      ),
-    );
+          // Footer
+          Positioned(
+            bottom: 16.0,
+            left: 0,
+            right: 0,
+            child: Center(
+              child: Text(
+                'Copyright © 2025 Ayub Karanja | All rights reserved. \n for Moringa School AI Class (AIDV-PT06) \n Developed with Flutter',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white.withOpacity(0.7),
+                  fontSize: 12,
+                ),
+              ),
+            ),
+          ),
+          // New Quote Button
+          Positioned(
+            bottom: 80.0, // Adjust this value to move the button higher
+            left: 0,
+            right: 0,
+            child: Center(
+              child: FloatingActionButton.extended(
+                onPressed: isLoading ? null : fetchQuote,
+                icon: const Icon(Icons.refresh),
+                label: const Text(
+                  'New Quote',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ), // Ensure label is white
+                ),
+                backgroundColor: Theme.of(context).colorScheme.primary,
+                foregroundColor: Theme.of(context).colorScheme.onPrimary,
+              ),
+            ),
+          ),
+        ], // End of Stack children
+      ), // End of Stack
+    ); // End of Scaffold
   }
 }
