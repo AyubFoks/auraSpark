@@ -1,8 +1,8 @@
+![AuraSpark Screenshot](assets/images/as_color.png)
+
 # AuraSpark
 
 AuraSpark is a simple, elegant multi-platform application that displays inspiring quotes. With a clean interface and a refreshing user experience, it aims to deliver a moment of motivation whenever you need it.
-
-![AuraSpark Screenshot](assets/images/as_color.png)
 
 ## Description
 
