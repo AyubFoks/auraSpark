@@ -191,7 +191,6 @@ class _QuoteScreenState extends State<QuoteScreen> {
                                 '"$quote"',
                                 style: const TextStyle(
                                   fontSize: 24,
-                                  fontStyle: FontStyle.italic,
                                   color: Colors.black87,
                                   fontWeight:
                                       FontWeight.bold, // Make quote bold

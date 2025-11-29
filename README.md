@@ -1,21 +1,21 @@
-# AuraSpark ✨
+# AuraSpark
 
 AuraSpark is a simple, elegant multi-platform application that displays inspiring quotes. With a clean interface and a refreshing user experience, it aims to deliver a moment of motivation whenever you need it.
 
 ![AuraSpark Screenshot](assets/images/as_color.png)
 
-## 📜 Description
+## Description
 
 This project is a Flutter-based application that fetches random quotes from an API and presents them to the user. It features a refresh button to load new quotes and is designed to run on multiple platforms, including Android, iOS, web, and desktop.
 
-## ✨ Features
+## Features
 
 * **Random Quotes:** Get inspired with a new quote every time.
 * **Refresh On-the-Go:** Tap a button to fetch a new quote instantly.
 * **Multi-Platform:** Runs on Android, iOS, Web, Windows, macOS, and Linux from a single codebase.
 * **Sleek UI:** Aesthetically pleasing design with a video background and custom fonts.
 
-## 💻 Tech Stack
+## Tech Stack
 
 * **Framework:** [Flutter](https://flutter.dev/)
 * **Language:** [Dart](https://dart.dev/)
@@ -24,7 +24,7 @@ This project is a Flutter-based application that fetches random quotes from an A
   * `video_player`: For the animated background.
   * `flutter_dotenv`: For managing environment variables (API keys).
 
-## 📂 Project Structure
+## Project Structure
 
 The project follows the standard Flutter project structure.
 
@@ -42,7 +42,7 @@ aura_spark/
 └── README.md         # This file
 ```
 
-## ⚙️ Installation
+## Installation
 
 To get a local copy up and running, follow these simple steps.
 
@@ -82,15 +82,15 @@ To get a local copy up and running, follow these simple steps.
 
     This command will run the app on your connected device, emulator, or browser.
 
-## 🚀 Usage
+## Usage
 
 Once the application is running, you will see a random quote. To get a new quote, simply tap the "New Quote" button.
 
-## 🔧 Configuration
+## Configuration
 
 The primary configuration required is the API key for the quotes API. This is handled via the `.env` file as described in the installation section. No other configuration is required.
 
-## 🤔 Troubleshooting
+## Troubleshooting
 
 * **Failed to load quote:**
   * Ensure you have a valid API key in your `.env` file.
@@ -100,7 +100,7 @@ The primary configuration required is the API key for the quotes API. This is ha
   * Run `flutter doctor` to check for any issues with your Flutter installation.
   * Ensure all dependencies are correctly installed by running `flutter pub get`.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -112,7 +112,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
