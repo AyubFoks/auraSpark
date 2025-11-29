@@ -18,10 +18,10 @@ I chose to build AuraSpark using the **Flutter** framework and the **Dart** prog
 
 As a newcomer to mobile and multi-platform development, this project was a fantastic learning opportunity. My choice of Flutter was driven by a mix of learning goals and strategic advantages:
 
-*   **AI-Assisted Learning:** I was new to the Flutter framework and the Dart language, so I used this project as a practical exercise. AI assistance was crucial in helping me learn and apply concepts, from basic widgets to asynchronous API calls.
-*   **Multi-Platform Ambition:** A key goal of mine is to build apps that run on multiple platforms (mobile, web, and desktop). Flutter's "write once, deploy anywhere" capability was the main reason I chose it, as it aligns perfectly with my future projects.
-*   **Beautiful and Performant UI:** I wanted a "clean interface and a refreshing user experience." Flutter excels at creating beautiful, custom user interfaces that perform smoothly, thanks to its widget-based architecture and direct rendering engine.
-*   **Fast Development:** Features like Hot Reload allowed me to experiment and see changes in real-time, which was invaluable for quickly iterating on the app's design and feel.
+* **AI-Assisted Learning:** I was new to the Flutter framework and the Dart language, so I used this project as a practical exercise. AI assistance was crucial in helping me learn and apply concepts, from basic widgets to asynchronous API calls.
+* **Multi-Platform Ambition:** A key goal of mine is to build apps that run on multiple platforms (mobile, web, and desktop). Flutter's "write once, deploy anywhere" capability was the main reason I chose it, as it aligns perfectly with my future projects.
+* **Beautiful and Performant UI:** I wanted a "clean interface and a refreshing user experience." Flutter excels at creating beautiful, custom user interfaces that perform smoothly, thanks to its widget-based architecture and direct rendering engine.
+* **Fast Development:** Features like Hot Reload allowed me to experiment and see changes in real-time, which was invaluable for quickly iterating on the app's design and feel.
 
 ## 3. System Requirements
 
@@ -141,7 +141,107 @@ if (result.containsKey('error')) {
 */
 ```
 
-## 6. Common Issues and Fixes
+## 6. Prompts Journal
+
+### Sample Prompts
+
+#### 1. Project Initialization
+
+I began my project by asking Claude to help me setup the IDE and innitialize the project while allowing me to learn.
+Here is the first prompt.
+>>
+>I am a junior Software Developer. I need to create a Flutter app that generates "Quote of the Day" and displays it on the interface. I want to be able to create a multi-platform app that can run on android, IOS and web and hence the Flutter choice.
+>
+>I have zero experience with flutter and the Dart language. I want to learn how Flutter and Dart works while at it. At every stage of this development, explain to me what is happening and ask me questions to test my understanding. I am good with Vanilla Javascript, CSS, TailwindCSS, HTML, React, Python and Flask so you can use them for context explanation.
+>
+>Here is the plan/steps I want you to follow. Ask me any clarifying questions and also give me your insight on best practices:
+>
+>1. Walk me through the process of installing flutter and Dart in my VS Code IDE.
+>2. Show me how to initialize a flutter project.
+>3. Help me create a minimal working example.
+>4. Suggest to me other features or ways to improve my app.
+>
+>Remember, the goal is to help me learn basic Flutter through this project. Deliver the lesson in small bits. Ensure I have understood one step before moving to the next.
+
+Claude guided me while asking me clarifying questions to asses my understanding of what is happening.
+
+[Link to Claude Conversation](<https://claude.ai/share/451a8b8e-228d-4cd0-ba0f-624e909295c1>)
+
+---
+
+#### 2. Documentation Prompt
+
+After building the application, I needed to create a comprehensive `README.md` file. I used Gemini CLI to generate the file within the IDE. Here is the prompt I used:
+
+> Please create a comprehensive README.md file for my project based on the following information:
+> Project name: AuraSpark
+> Key features:
+> • Random quotes generation
+> • Refresh button for new quotes
+> • Multi-Platform
+>
+> The README should include:
+>
+> 1. Clear project title and description
+> 2. Tech Stack details
+> 3. Project Structure
+> 4. Installation requirements
+> 5. Installation instructions
+> 6. Basic usage examples
+> 7. Features overview
+> 8. Configuration options
+> 9. Troubleshooting section
+> 10. Contributing guidelines
+> 11. License information (MIT Licence)
+
+### AI Response Samples
+
+Here is a sample AI Response.
+
+>Great project choice! Building a "Quote of the Day" app is perfect for learning Flutter fundamentals. I can see you have a solid web development background, which will help a lot.
+>
+>Before we dive in, let me ask a few clarifying questions to tailor this learning experience:
+>
+>## Clarifying Questions
+>
+>1. **Quote Source**: How do you want to get the quotes?
+>
+> * Hardcoded array of quotes in the app?
+> * Fetch from a free API (like quotable.io or zenquotes.io)?
+> * Build your own simple backend with Flask?
+>
+>2. **Operating System**: What OS are you using? (Windows, Mac, or Linux?) This affects the installation steps.
+>
+>3. **Current VS Code Setup**: Do you already have VS Code installed with any extensions?
+>
+>4. **Display Preferences**: Any specific design in mind? (Simple centered text, card-based design, background images, etc.?)
+>
+>## My Insights on Your Plan
+>
+>Your step-by-step approach is **excellent** for learning! Here are some thoughts:
+>
+>* ✅ **Good**: Starting with installation, then minimal example, then iteration
+>* 💡 **Suggestion**: Between steps 3 and 4, I'd add a step for understanding Flutter's widget tree and state management basics (since you're coming from React, this will feel familiar but different)
+>* 💡 **Best Practice**: Flutter's "hot reload" feature is a game-changer (like React's fast refresh but even faster). We'll leverage this heavily.
+>
+>**One more thing**: Since you know React, think of Flutter widgets as React components, but instead of JSX, everything is a Dart class/function. The mindset is very similar!
+>
+>---
+>
+>**Ready to start with Step 1 (Installation)** once you answer the questions above? Or should I proceed with general installation instructions for all platforms?
+
+### AI Evaluation Overview
+
+I found AI to be very insightful. As long as the prompts had enough context and were specific, the answers were spot on.
+
+The accuracy and usefulness of AI responses are directly correlated with the quality of the prompts provided. When prompts are clear, specific, and include sufficient context, the AI is much more likely to generate accurate and relevant information. This was evident throughout the project:
+*   **Contextual Understanding:** Providing context about my experience level (junior developer, familiar with React) and my learning goals allowed the AI to tailor its explanations and suggestions effectively.
+*   **Specificity in Tasks:** Breaking down the project into discrete steps (e.g., "install Flutter," "initialize project," "minimal example") helped the AI deliver targeted and actionable guidance.
+*   **Iterative Prompting:** When initial responses were too broad or not exactly what was needed, refining the prompt with more details or constraints often led to improved results. For instance, when asking for a `README.md`, specifying each section required ensured a comprehensive output.
+
+In essence, the AI acted as a highly effective learning companion and development assistant, particularly when guided by well-structured and detailed prompts.
+
+## 7. Common Issues and Fixes
 
 This section details some common issues encountered during development and how to resolve them.
 
@@ -181,12 +281,12 @@ This section details some common issues encountered during development and how t
 
 ### Issue 5: Video Autoplay is Blocked on Web Browsers
 
-*   **Symptom:** The background video loads but does not start playing automatically on web browsers. It remains as a static image.
-*   **Resolution:** Modern browsers block the automatic playing of videos that contain audio to improve user experience. AI helped me figure out that the standard workaround is to mute the video before playing it. The fix was to programmatically mute the `VideoPlayerController` by calling `_videoController.setVolume(0.0)` right before calling `_videoController.play()`.
-*   **Helpful Link:** [Stack Overflow: Flutter video_player web autoplay](https://stackoverflow.com/questions/66328796/flutter-video-player-web-autoplay)
-*   **Example AI Prompt:** "My Flutter video background won't autoplay in Chrome. The video loads but just sits on the first frame. How can I force a video to autoplay on web, and do I need to mute it?"
+* **Symptom:** The background video loads but does not start playing automatically on web browsers. It remains as a static image.
+* **Resolution:** Modern browsers block the automatic playing of videos that contain audio to improve user experience. AI helped me figure out that the standard workaround is to mute the video before playing it. The fix was to programmatically mute the `VideoPlayerController` by calling `_videoController.setVolume(0.0)` right before calling `_videoController.play()`.
+* **Helpful Link:** [Stack Overflow: Flutter video_player web autoplay](https://stackoverflow.com/questions/66328796/flutter-video-player-web-autoplay)
+* **Example AI Prompt:** "My Flutter video background won't autoplay in Chrome. The video loads but just sits on the first frame. How can I force a video to autoplay on web, and do I need to mute it?"
 
-## 7. References
+## 8. References
 
 This section provides links to the official documentation and resources for the technologies, services, and packages used in the AuraSpark application.
 
